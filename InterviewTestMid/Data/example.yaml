@@ -1,0 +1,25 @@
+﻿name: Build and Test
+
+# This workflow will be triggered on pushes to the test/abiramasundari branch
+on:
+  push:
+    branches: [ { name: 'test/abiramasundari' } ]  
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest  
+
+    steps:
+      - uses: actions/checkout@v3  
+
+      # Build project 
+      - name: Build Project and Package
+        run: |
+          dotnet restore
+          dotnet build --configuration Release
+          dotnet pack
+
+      # Run unit tests 
+      - name: Run Unit Tests
+        run: |
+          dotnet test --no-build --verbosity detailed

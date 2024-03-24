@@ -1,0 +1,137 @@
+[
+  {
+    "PartId": 11170,
+    "PartNbr": "101687",
+    "PartDesc": "LABEL UNPRINTED",
+    "Meta": {
+      "PartClassification": {
+        "LookId": 2,
+        "LookNbr": "PACK",
+        "LookDesc": "Packaging",
+	    "LookExtra": "Secondary Packaging"
+      },
+      "PartMasterType": {
+        "LookId": 605,
+        "LookNbr": "F05",
+        "LookDesc": "Label"
+      },
+      "PartColour": {
+        "LookId": 1,
+        "LookNbr": "Cl",
+        "LookDesc": "No colour"
+      },
+      "PartOpacity": {
+        "LookId": 3,
+        "LookNbr": "Op",
+        "LookDesc": "Opaque"
+      }
+    },
+	"PartWeight": {
+        "UoM": 10,
+        "Value": 0.50000000
+    },
+    "ConversionsApplied": false,
+    "Materials": [
+      {
+        "Material": {
+          "LookId": 1000,
+          "LookNbr": "PapPap",
+          "LookDesc": "Paper"
+        },
+        "Percentage": 100.000000
+      }
+    ]
+  },
+  {
+    "PartId": 11171,
+    "PartNbr": "101688",
+    "PartDesc": "BLUE TRAY",
+    "Meta": {
+      "PartClassification": {
+        "LookId": 2,
+        "LookNbr": "PACK",
+        "LookDesc": "Packaging",
+	    "LookExtra": "Secondary Packaging"
+      },
+      "PartMasterType": {
+        "LookId": 140,
+        "LookNbr": "A40",
+        "LookDesc": "Tray"
+      },
+      "PartColour": {
+        "LookId": 3,
+        "LookNbr": "Bl",
+        "LookDesc": "Blue"
+      },
+      "PartOpacity": {
+        "LookId": 1,
+        "LookNbr": "Tp",
+        "LookDesc": "Transparent"
+      }
+    },
+	"PartWeight": {
+        "UoM": 10,
+        "Value": 1.00000000
+    },
+    "ConversionsApplied": false,
+    "Materials": [
+      {
+        "Material": {
+          "LookId": 2000,
+          "LookNbr": "PlaPet",
+          "LookDesc": "Plastic - PET"
+        },
+        "Percentage": 100.000000
+      }
+    ]
+  },
+  {
+    "PartId": 11172,
+    "PartNbr": "101689",
+    "PartDesc": "FOIL",
+    "Meta": {
+      "PartClassification": {
+        "LookId": 2,
+        "LookNbr": "PACK",
+        "LookDesc": "Packaging",
+	    "LookExtra": "Secondary Packaging"
+      },
+      "PartMasterType": {
+        "LookId": 520,
+        "LookNbr": "E20",
+        "LookDesc": "Wrap (Non Stretch/Shrink)"
+      },
+      "PartOpacity": {
+        "LookId": 3,
+        "LookNbr": "Op",
+        "LookDesc": "Opaque"
+      }
+    },
+	"PartWeight": {
+        "UoM": 10,
+        "Value": 1.00000000
+    },
+    "ConversionsApplied": false,
+    "Materials": [
+      {
+        "Material": {
+          "LookId": 2001,
+          "LookNbr": "PlaLDP",
+          "LookDesc": "Plastic - LDPE"
+        },
+        "Percentage": 50.000000,
+        "MatrIsBarrier": false,
+        "MatrIsDensifier": false,
+        "MatrIsOpacifier": false
+      },
+	  {
+        "Material": {
+          "LookId": 4000,
+          "LookNbr": "MetAlu",
+          "LookDesc": "Metal - Aluminium"
+        },
+        "Percentage": 50.000000
+      }
+    ]
+  }
+]
