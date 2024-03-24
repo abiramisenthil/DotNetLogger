@@ -1,8 +1,6 @@
 ﻿using InterviewTestMid.HelperFunctions;
 using InterviewTestMid.LoggerFiles;
 using InterviewTestMid.SerializationModels;
-using Microsoft.Extensions.Configuration;
-
 using InterviewTestMid.Constant;
 
 
@@ -12,13 +10,12 @@ namespace InterviewTestMid
     {
         private readonly ILogger _logger;
         private readonly IHelper _helper;
-        private readonly IConfiguration _configuration;
-
-        public Jsontask(ILogger logger, IHelper helper, IConfiguration configuration)
+        
+        public Jsontask(ILogger logger, IHelper helper)
         {
             _logger = logger;
             _helper = helper;
-            _configuration = configuration;
+            
         }
         public void DoWork(string jsonFilePath, string foilFile)
         {

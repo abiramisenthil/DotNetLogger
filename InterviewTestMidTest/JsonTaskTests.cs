@@ -14,14 +14,13 @@ namespace InterviewTestMidTest
     {
         Mock<ILogger> loggerMock = new Mock<ILogger>();
         Mock<IHelper> helperMock = new Mock<IHelper>();
-        Mock<IConfiguration> configurationMock = new Mock<IConfiguration>();
+       
 
         [SetUp]
         public void Setup()
         {
             loggerMock = new Mock<ILogger>();
             helperMock = new Mock<IHelper>();
-            configurationMock= new Mock<IConfiguration>();
         }
 
         [Test]
@@ -31,9 +30,6 @@ namespace InterviewTestMidTest
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), "TestJsonFiles", "SampleData.json");
             string foilFileName = "FoilData.json";
             List<Part> expectedParts = GetExpectedParts("FOIL");
-            Mock<IConfigurationSection> foilFileNameSectionMock = new Mock<IConfigurationSection>();
-            foilFileNameSectionMock.Setup(s => s.Value).Returns("FoilData");
-            //configurationMock.Setup(config => config.GetSection("FoilFileName")).Returns(foilFileNameSectionMock.object);
 
 
             helperMock.Setup(helper => helper.LoadJsonFromFile(It.IsAny<string>())).Returns(expectedParts);
@@ -44,7 +40,7 @@ namespace InterviewTestMidTest
 
 
             // Act 
-            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object, configurationMock.Object);
+            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object);
             jsontask.DoWork(filePath, foilFileName);
 
             // Assert 
@@ -62,7 +58,7 @@ namespace InterviewTestMidTest
             helperMock.Setup(helper => helper.LoadJsonFromFile(It.IsAny<string>())).Throws<FileNotFoundException>();
 
             // Act 
-            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object, configurationMock.Object);
+            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object);
             jsontask.DoWork(filePath, foilFileName);
 
             // Assert 
@@ -97,7 +93,7 @@ namespace InterviewTestMidTest
             string foilFileName = "FoilData.json";
 
             // Act 
-            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object, configurationMock.Object);
+            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object);
             jsontask.DoWork(filePath, foilFileName);
 
             // Assert 
@@ -118,7 +114,7 @@ namespace InterviewTestMidTest
             helperMock.Setup(helper => helper.GetMaterialDescriptionsForPart(It.IsAny<List<Part>>(), It.IsAny<string>())).Returns(new List<Part>());
 
             // Act 
-            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object, configurationMock.Object);
+            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object);
             jsontask.DoWork(filePath, foilFileName);
 
             // Assert 
@@ -135,7 +131,7 @@ namespace InterviewTestMidTest
             string foilFileName = "FoilData.json";
 
             // Act 
-            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object, configurationMock.Object);
+            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object);
             jsontask.DoWork(filePath, foilFileName);
 
             // Assert 
@@ -160,7 +156,7 @@ namespace InterviewTestMidTest
 
 
             // Act 
-            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object, configurationMock.Object);
+            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object);
             jsontask.DoWork(filePath, foilFileName);
 
             // Assert 
@@ -184,7 +180,7 @@ namespace InterviewTestMidTest
 
 
             // Act 
-            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object, configurationMock.Object);
+            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object);
             jsontask.DoWork(filePath, foilFileName);
 
             // Assert 
@@ -208,7 +204,7 @@ namespace InterviewTestMidTest
 
 
             // Act 
-            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object, configurationMock.Object);
+            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object);
             jsontask.DoWork(filePath, foilFileName);
 
             // Assert 
@@ -232,7 +228,7 @@ namespace InterviewTestMidTest
 
 
             // Act 
-            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object, configurationMock.Object);
+            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object);
             jsontask.DoWork(filePath, foilFileName);
 
             // Assert 
@@ -256,7 +252,7 @@ namespace InterviewTestMidTest
 
 
             // Act 
-            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object, configurationMock.Object);
+            var jsontask = new Jsontask(loggerMock.Object, helperMock.Object);
             jsontask.DoWork(filePath , foilFileName);
 
             // Assert 
